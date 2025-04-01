@@ -1,5 +1,0 @@
- private void txtkhtodorla_TextChanged(object sender, EventArgs e)
- {
-     
-     txtoption.Enabled = true;
- }

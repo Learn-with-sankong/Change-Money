@@ -1,0 +1,9 @@
+private void btnclear_Click(object sender, EventArgs e)
+{
+    txtinput.Clear();
+    txtresult.Clear();
+    txtoption.Text = null;
+    btnchange.Enabled = false;
+    txtinput.Enabled = false;  
+
+}

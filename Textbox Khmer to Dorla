@@ -1,0 +1,8 @@
+ private void txtkhtodorla_KeyPress(object sender, KeyPressEventArgs e)
+ {
+     //Type only number
+     if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+     {
+         e.Handled = true;
+     }
+ }

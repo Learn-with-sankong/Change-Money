@@ -1,0 +1,63 @@
+ private void btnchange_Click(object sender, EventArgs e)
+ {
+     try
+     {
+         double valueinput, khtodorla, dorlakh, bartdorla, dorlabart, bartkh, khbart, result;
+         btnclear.Enabled = true;
+         valueinput = double.Parse(txtinput.Text);
+         khtodorla = double.Parse(txtkhtodorla.Text);
+         dorlakh = double.Parse(txtdorlatokh.Text);
+         bartdorla = double.Parse(txtbarttodorla.Text);
+         dorlabart = double.Parse(txtdorlatobart.Text);
+         bartkh = double.Parse(txtbarttokh.Text);
+         khbart = double.Parse(txtkhtobart.Text);
+         
+
+
+
+         if (txtoption.SelectedIndex == 0)
+         {
+             
+             result = valueinput / khtodorla;
+             result = Math.Round(result, 3);
+             txtresult.Text = result.ToString();
+             
+         }
+         else if (txtoption.SelectedIndex == 1)
+         {
+             result = valueinput * dorlakh;
+             txtresult.Text = result.ToString();
+         }
+         else if (txtoption.SelectedIndex == 2)
+         {
+             result = valueinput / (bartdorla/100);
+             result = Math.Round(result, 3);
+
+             txtresult.Text = result.ToString();
+         }
+         else if (txtoption.SelectedIndex == 3)
+         {
+             result = valueinput * (dorlabart/100);
+             result = Math.Round(result, 3);
+             txtresult.Text = result.ToString();
+         }
+         else if (txtoption.SelectedIndex == 4)
+         {
+             result = valueinput *10 / (khbart);
+             result = Math.Round(result, 2);
+             txtresult.Text = result.ToString();
+         }
+         else if (txtoption.SelectedIndex == 5)
+         {
+             result = valueinput * (bartkh/10);
+             txtresult.Text = result.ToString();
+         }
+
+     }
+     catch
+     {
+         MessageBox.Show("សូមមេត្តាបញ្ចូលអត្រាប្ដូរប្រាក់", "អត្រាប្ដូរប្រាក់", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+     }
+
+
+ }

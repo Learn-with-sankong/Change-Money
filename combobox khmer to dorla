@@ -1,5 +1,51 @@
- private void txtkhtodorla_TextChanged(object sender, EventArgs e)
- {
-     
-     txtoption.Enabled = true;
- }
+private void txtoption_SelectedIndexChanged(object sender, EventArgs e)
+{
+    lbinput.Visible = true;
+    lbresult.Visible = true;
+    if (txtoption.SelectedIndex == 0)
+    {
+        lbinput.Text = "រៀល";
+        lbresult.Text = "ដុល្លារ";
+        txtinput.Text = "";
+        txtresult.Text = "";
+        
+    }
+    else if (txtoption.SelectedIndex == 1)
+    {
+        lbinput.Text = "ដុល្លារ";
+        lbresult.Text = "រៀល";
+        txtinput.Text = "";
+        txtresult.Text = "";
+
+    }
+    else if (txtoption.SelectedIndex == 2)
+    {
+        lbinput.Text = "បាត";
+        lbresult.Text = "ដុល្លារ";
+        txtinput.Text = "";
+        txtresult.Text = "";
+    }
+    else if (txtoption.SelectedIndex == 3)
+    {
+        lbinput.Text = "ដុល្លារ";
+        lbresult.Text = "បាត";
+        txtinput.Text = "";
+        txtresult.Text = "";
+    }
+    else if (txtoption.SelectedIndex == 4)
+    {
+        lbinput.Text = "ខ្មែរ";
+        lbresult.Text = "បាត";
+        txtinput.Text = "";
+        txtresult.Text = "";
+
+    }
+    else if (txtoption.SelectedIndex == 5)
+    {
+        
+        lbinput.Text = "បាត";
+        lbresult.Text = "ខ្មែរ";
+        txtinput.Text = "";
+        txtresult.Text = "";
+    }
+}
